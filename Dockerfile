@@ -4,9 +4,6 @@ FROM jenkins/jenkins:lts
 
 USER root
 RUN apt-get -y update && \
-    apt-get -y install python-software-properties && \
-    apt-get -y install apt-file && \
-    apt-file update && \
     apt-get -y install software-properties-common && \
     apt-add-repository universe && \
     apt-get -y update
