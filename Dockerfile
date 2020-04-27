@@ -4,5 +4,6 @@ FROM jenkins/jenkins:lts
 
 USER root
 RUN apt-get -y install python
+RUN apt-get -y install maven
     
 ENTRYPOINT ["/sbin/tini" "--" "/usr/local/bin/jenkins.sh"]
