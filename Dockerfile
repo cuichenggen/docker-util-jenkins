@@ -14,4 +14,4 @@ RUN apt-get -y install python wget
 # RUN export MAVEN_HOME=/usr/local/apache-maven
 # RUN export PATH=${M2_HOME}/bin:${PATH}
     
-ENTRYPOINT ["/bin/tini" "--" "/usr/local/bin/jenkins.sh"]
+CMD ["/sbin/tini" "--" "/usr/local/bin/jenkins.sh"]
