@@ -3,7 +3,11 @@ FROM jenkins/jenkins:lts
 # RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 USER root
-RUN apt-get -y install software-properties-common && \
+RUN apt-get -y update && \
+    apt-get -y install python-software-properties && \
+    apt-get -y install apt-file && \
+    apt-file update && \
+    apt-get -y install software-properties-common && \
     apt-add-repository universe && \
     apt-get -y update
 RUN apt-get -y install python
