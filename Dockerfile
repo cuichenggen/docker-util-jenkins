@@ -6,3 +6,5 @@ USER root
 RUN apt-get -y update && \
     apt-get -y upgrade && \
     apt-get -y install python3
+    
+ENTRYPOINT ["/sbin/tini" "--" "/usr/local/bin/jenkins.sh"]
