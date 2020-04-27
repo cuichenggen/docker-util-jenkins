@@ -3,6 +3,6 @@ FROM jenkins/jenkins:lts
 # RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 USER root
-RUN apt-get -y install python3
+RUN apt-get -y install python
     
 ENTRYPOINT ["/sbin/tini" "--" "/usr/local/bin/jenkins.sh"]
